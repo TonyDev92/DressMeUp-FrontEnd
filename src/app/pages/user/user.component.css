@@ -1,0 +1,108 @@
+.routes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.routes__content {
+  width: 90%;
+  border: 1px solid black;
+  height: 7vh;
+  display: flex;
+  border-radius: 10px;
+  background-color: rgba(230, 230, 148, 0.977);
+  background-image: linear-gradient(to top, rgba(230, 230, 148, 0.977), rgba(192, 192, 192, 0.925));
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+.routes__content__name {
+  font-family: "Nomark";
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  margin-right: 5px;
+}
+
+.logout {
+  width: 90%;
+  height: 7vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(230, 230, 148, 0.977);
+  background-image: linear-gradient(to top, rgba(230, 230, 148, 0.977), rgba(192, 192, 192, 0.925));
+}
+.logout__cont {
+  width: 80%;
+}
+.logout__cont__img {
+  margin: 5px;
+  width: 15%;
+}
+.logout__btn {
+  height: 5vh;
+  background-color: transparent;
+  border: none;
+  font-family: "Nomark";
+  font-size: large;
+}
+
+.config {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px;
+}
+.config__img {
+  width: 19%;
+}
+
+.go {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.go__img {
+  width: 100%;
+}
+
+.delete {
+  width: 90%;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  background-color: rgba(230, 230, 148, 0.977);
+  background-image: linear-gradient(to top, rgba(230, 230, 148, 0.977), rgba(192, 192, 192, 0.925));
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.delete__content {
+  width: 37%;
+  margin: 5px;
+}
+.delete__content__img {
+  margin: 5px;
+  width: 20%;
+}
+.delete__btn {
+  border: none;
+  background-color: transparent;
+  font-family: "Nomark";
+  font-size: large;
+}/*# sourceMappingURL=user.component.css.map */

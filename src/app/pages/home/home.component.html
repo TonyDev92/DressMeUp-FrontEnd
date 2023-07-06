@@ -1,0 +1,32 @@
+<div>
+    <app-header></app-header>
+    <ng-container class="products" *ngIf="isActive">
+        <app-gallery [products]="productos"></app-gallery>
+    </ng-container>
+    <div *ngIf="!isActive" class="home">
+        <div class="home__container">
+            <a routerLink="/productos/hombre">
+                <img class="home__container__img" src="./assets/man-1866574_1280.jpg" alt="hombre">
+            </a>
+            <h3>Hombre</h3>
+        </div>
+        <div class="home__container">
+            <a routerLink="/productos/mujer">
+                <img class="home__container__img" src="./assets/woman-1462986_1280.jpg" alt="mujer">
+            </a>
+            <h3>Mujer</h3>
+        </div>
+        <div class="home__container">
+            <a routerLink="/productos/zapatos">
+                <img class="home__container__img" src="./assets/shoe-1589220_1280.jpg" alt="zapatos">
+            </a>
+            <h3>Zapatos</h3>
+        </div>
+        <div class="home__container">
+            <a routerLink="/productos/complementos">
+                <img class="home__container__img" src="./assets/fashion-2208045_1280.jpg" alt="complementos">
+            </a>
+            <h3>Complementos</h3>
+        </div>
+    </div>
+</div>

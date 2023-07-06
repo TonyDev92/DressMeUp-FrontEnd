@@ -1,0 +1,11 @@
+<header class="head">
+    <div class="head__content">
+        <img class="head__content__img" src="./assets/logo.png" alt="logo">
+    </div>
+    <div class="head__searcher">
+        <img id="search" (click)="setSearch()" src="./assets/buscar.png" alt="buscar">
+        <div class="head__searcher__container">
+            <input *ngIf="search" class="head__searcher__container--active" type="text" placeholder="buscar" name="filteredProducts" [(ngModel)]="filteredProducts" (input)="onInputChange()">
+        </div>
+    </div>
+</header>

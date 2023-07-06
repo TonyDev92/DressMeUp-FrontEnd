@@ -1,0 +1,26 @@
+.profile {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+.profile__container {
+  width: 10%;
+  position: relative;
+  padding: 12px;
+}
+.profile__container__img {
+  width: 100%;
+}
+.profile__txt {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+}
+.profile__txt__titles {
+  text-align: justify;
+  margin: 1rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}/*# sourceMappingURL=miprofile.component.css.map */

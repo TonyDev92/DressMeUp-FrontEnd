@@ -1,0 +1,49 @@
+.log {
+  background-color: #111111;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.log__title {
+  padding: 20px;
+  font-family: "Nomark";
+  font-size: xx-large;
+  color: whitesmoke;
+}
+.log__container {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+}
+.log__container__img {
+  width: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.log__butns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+.log__butns__btn {
+  width: 50%;
+  margin: 1em;
+  height: 5vh;
+  border-radius: 5px;
+  background-color: #865DFF;
+  font-family: "Nomark";
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.log__butns__btn:active {
+  background-color: #9CFF2E;
+  color: black;
+}/*# sourceMappingURL=onboarding.component.css.map */

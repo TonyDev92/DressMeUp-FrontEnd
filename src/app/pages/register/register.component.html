@@ -1,0 +1,27 @@
+<div class="formdata">
+    <div class="back">
+        <a routerLink="">
+            <img class="back__img"  src="./assets/flecha-atras.png" alt="back">
+        </a>
+    </div>
+    <form class="container" action="" method="post" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <fieldset class="container__fld">
+            <legend class="container__fld__title">Tus Datos</legend>
+            <input class="container__fld__inp" type="text" formControlName="name"  placeholder="Nombre y Apellidos">
+            <input class="container__fld__inp" type="text" formControlName="email"  placeholder="Email">
+            <input class="container__fld__inp" type="password" formControlName="password" placeholder="Contraseña">
+        </fieldset>
+        <fieldset class="container__fld">
+            <legend class="container__dir__title">Dirección</legend>
+            <input class="container__fld__inp" type="text" formControlName="street" placeholder="Calle, Número , Piso">
+            <input class="container__fld__inp" type="text" formControlName="postalCode" placeholder="Código Postal">
+            <input class="container__fld__inp" type="text" formControlName="city" placeholder="Ciudad">
+            <input class="container__fld__inp" type="text" formControlName="province" placeholder="Provincia">
+        </fieldset>
+        <div class="acept">
+            <input class="check" type="checkbox" value="acepto" name="terms">
+            <label class="term" for="terms">Acepto los terminos y condiciones de Dress me up.</label>
+        </div>
+        <button class="btn" type="submit">Continuar</button>
+    </form>
+</div>

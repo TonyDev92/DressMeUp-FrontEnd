@@ -1,0 +1,23 @@
+<nav class="menu">
+    <a class="menu__in" (click)="setValue()" routerLink="inicio">
+        <div class="menu__home">
+            <img class="menu__home__hm" src="./assets/hogar.png" alt="home">
+        </div>
+    </a>
+    <a class="menu__in" routerLink="/productos">
+        <div class="menu__products">
+            <img class="menu__products__prod" src="./assets/gancho-de-ropa.png" alt="product">
+        </div>
+    </a>
+    <div class="menu__content">
+        <a class="menu__usuario" routerLink="/usuario">
+            <img class="menu__content__img" src="./assets/usuario.png" alt="logo">
+        </a>
+    </div>
+    <div class="menu__user">
+        <a routerLink="carrito">
+            <img class="menu__user__cart" src="./assets/anadir-al-carrito.png" alt="cart">
+        </a>
+        <span *ngIf="count.length > 0" class="cart__count">{{count.length}}</span>
+    </div>
+</nav>

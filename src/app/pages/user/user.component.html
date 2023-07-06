@@ -1,0 +1,41 @@
+<div class="routes">
+    <div class="routes__content" *ngFor="let path of routesPath">
+        <a class="routes__content__name" routerLink={{path.path}}>
+            <div class="config" *ngIf="path.name === 'Configuración'">
+                <img class="config__img" src="./assets/configuraciones.png" alt="config">
+            </div>
+            <div class="config" *ngIf="path.name === 'Mi perfil'">
+                <img class="config__img" src="./assets/perfil-del-usuario.png" alt="profile">
+            </div>
+            <div class="config" *ngIf="path.name === 'Soporte'">
+                <img class="config__img" src="./assets/mesa-de-ayuda.png" alt="support">
+            </div>
+            <div class="config" *ngIf="path.name === 'Notificaciones'">
+                <img class="config__img" src="./assets/campana.png" alt="notf">
+            </div>
+            {{path.name}}</a>
+        <div class="go">
+            <img class="go__img" src="./assets/flecha-correcta.png" alt="go">
+        </div>
+    </div>
+    <div class="logout">
+        <div class="logout__cont">
+            <img class="logout__cont__img" src="./assets/cerrar-sesion.png" alt="close">
+        </div>
+        <button class="logout__btn" (click)="logOut()">LogOut</button>
+        <div class="go">
+            <img class="go__img" src="./assets/flecha-correcta.png" alt="go">
+        </div>
+    </div>
+    <div class="delete">
+        <div class="delete__content">
+            <img class="delete__content__img" src="./assets/dejar-de-seguir.png" alt="x">
+        </div>
+        <button class="delete__btn">Eliminar mi cuenta</button>
+        <div class="go">
+            <img class="go__img" src="./assets/flecha-correcta.png" alt="go">
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

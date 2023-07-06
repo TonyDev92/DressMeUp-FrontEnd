@@ -1,0 +1,17 @@
+<div class="noprod" *ngIf="inCart.length <= 0">
+    <h2 class="noprod__txt">¡Aún no has añadido nada al carrito! Echa un vistazo a nuestra galería de productos</h2>
+    <app-gallery [products]="product"></app-gallery>
+</div>
+<div class="card" *ngFor="let product of inCart">
+    <h2 class="card__title">{{product.name}}</h2>
+    <div class="card__container">
+        <img class="card__container__img" src={{product.image}} alt={{product.name}}>
+    </div>
+    <p class="card__price">Precio :{{product.price}} €</p>
+    <p class="card__description">{{product.description}}</p>
+    <button (click)="deleteProduct(product)" class="card__delete">Eliminar</button>
+</div>
+<div class="info">
+    <p class="info__total" *ngIf="inCart.length > 0">Total: {{count.toFixed(2)}}€</p>
+    <button class="info__pay" *ngIf="inCart.length > 0">Tramitar pedido({{inCart.length}})<span *ngIf="inCart.length == 1">{{onlyOne}}</span><span *ngIf="inCart.length > 1">{{moreThan}}</span></button>
+</div>

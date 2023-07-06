@@ -1,0 +1,73 @@
+.formdata {
+  width: 101vw;
+  height: 101vh;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  color: wheat;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2rem;
+  padding-top: 10px;
+}
+.container__fld {
+  width: 98%;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+}
+.container__fld__title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.container__fld__inp {
+  width: 100%;
+  height: 4vh;
+  border: none;
+  border-bottom: 1px solid white;
+  margin: 15px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #b7a3f1;
+  margin: 5px;
+  color: aliceblue;
+}
+
+.acept {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check {
+  margin: 5px;
+}
+
+.btn {
+  width: 50%;
+  margin: 1em;
+  height: 5vh;
+  border-radius: 5px;
+  background-color: #865DFF;
+  font-family: "Nomark";
+  color: wheat;
+}
+
+.back {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.back__img {
+  width: 10%;
+  padding: 15px;
+}/*# sourceMappingURL=register.component.css.map */

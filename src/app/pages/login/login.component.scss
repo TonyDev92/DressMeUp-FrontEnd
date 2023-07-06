@@ -1,0 +1,61 @@
+.log{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #111111;
+    &__container{
+        width: 95%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        &__img{
+            width: 60%;
+            object-fit: cover;
+        }
+    }
+    &__butns{
+        width: 95%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__inp{
+            width: 50%;
+            height: 4vh;
+            border: none;
+            border-bottom: 1px solid white;
+            margin: 15px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #b7a3f1;
+            margin: 5px;
+            color: aliceblue;
+        }
+        &__btn{
+            width: 50%;
+            margin: 1em;
+            height: 5vh;
+            border-radius: 5px;
+            background-color: #865DFF;
+            font-family: 'Nomark';
+            color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+}
+
+.back{
+    width: 90%;
+    display: flex;
+    position: relative;
+    &__img{
+        width: 10%;
+        padding: 15px;
+    }
+}

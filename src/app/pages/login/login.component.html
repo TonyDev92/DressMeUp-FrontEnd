@@ -1,0 +1,15 @@
+<div class="log">
+    <div class="back">
+        <a routerLink="">
+            <img class="back__img" src="./assets/flecha-atras.png" alt="back">
+        </a>
+    </div>
+    <div class="log__container">
+        <img class="log__container__img" src="./assets/default.png" alt="dressmeup">
+    </div>
+    <form class="log__butns" action="" method="post" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="email" class="log__butns__inp" placeholder="Email" >
+        <input class="log__butns__inp" formControlName="password" type="password" placeholder="Password" >
+        <button class="log__butns__btn" type="submit">Iniciar Sesión</button>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+.home{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: 150px;
+    padding-bottom: 100px;
+    padding-top: 90px;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        margin: 1rem;
+        width: 350px;
+        height: auto;
+        &__img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

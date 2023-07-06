@@ -1,0 +1,67 @@
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 9vh;
+  background-color: rgba(230, 230, 148, 0.977);
+  background-image: linear-gradient(to top, rgba(230, 230, 148, 0.977), rgba(192, 192, 192, 0.925));
+}
+.menu__in {
+  width: 22%;
+  font-family: "Nomark";
+  color: #8294C4;
+}
+.menu__home {
+  width: 50%;
+}
+.menu__home__hm {
+  width: 100%;
+}
+.menu__content {
+  width: 25%;
+  height: 8vh;
+}
+.menu__content__img {
+  width: 50%;
+  height: 80%;
+  margin-top: 5px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.menu__products {
+  width: 10%;
+}
+.menu__products__prod {
+  margin-top: 10px;
+  width: 45px;
+  height: 45px;
+}
+.menu__user {
+  width: 10%;
+}
+.menu__user__cart {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cart__count {
+  position: absolute;
+  top: 5px;
+  left: 85%;
+  margin-right: 4px;
+  background-color: yellow;
+  color: #8294C4;
+  font-family: "Nomark";
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=navbar.component.css.map */

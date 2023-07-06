@@ -1,0 +1,39 @@
+.card{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 69px;
+    justify-content: center;
+    &__content{
+        width: 90%;
+        &__img{
+            width: 100%;
+        }
+    }
+    &__title{
+        width: 100%;
+        margin: 2px;
+        font-family: 'Nomark';
+        font-size: large;
+        text-align: center;
+    }
+    &__text{
+        width: 80%;
+        text-align: justify;
+        font-size: medium;
+        font-family: 'Nomark';
+    }
+    &__cart{
+        border: none;
+        width: 40%;
+        padding: 10px;
+        font-family: 'Nomark';
+        margin-top: 1rem;
+        border-radius: 15px;
+        background-color: rgba(230, 230, 148, 0.977);
+        background-image: linear-gradient(to top,  rgba(230, 230, 148, 0.977), rgba(192, 192, 192, 0.925));
+        color: #DAFFFB;
+    }
+}

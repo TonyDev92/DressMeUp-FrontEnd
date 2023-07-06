@@ -1,0 +1,9 @@
+<div class="card" *ngFor="let product of (products | filter : filterProducts) ">
+    <div class="card__content">
+        <img class="card__content__img" src={{product.image}} alt={{product.name}}>
+    </div>
+    <h3 class="card__title">{{product.name}}</h3>
+    <p class="card__text">Precio : {{product.price}} €</p>
+    <p class="card__text">{{product.description}}</p>
+    <button class="card__cart" (click)="add(product)">Añadir a la cesta</button>
+</div>
