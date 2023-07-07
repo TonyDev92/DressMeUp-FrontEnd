@@ -18,8 +18,8 @@
         display: flex;
         justify-content: center;
         &__img{
-            width: 60%;
-            object-fit: cover;
+            width: 80%;
+            object-fit: fill;
         }
     }
     &__butns{

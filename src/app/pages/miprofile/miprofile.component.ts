@@ -28,7 +28,8 @@ export class MiprofileComponent implements OnInit{
           this.street = res.street;
           this.province = res.province;
           this.created = new Date(res.createdAt)
-          
+          this.city = res.city;
+          this.postal = res.postalCode;
           const key = Object.keys(res)
         })
     }

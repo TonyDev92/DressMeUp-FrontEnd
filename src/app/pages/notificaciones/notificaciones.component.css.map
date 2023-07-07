@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"notificaciones.component.css"}
+{"version":3,"sources":["notificaciones.component.scss","notificaciones.component.css"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;EACA,WAAA;EACA,aAAA;ACCJ;ADAI;EACI,aAAA;EACA,UAAA;ACER;ADDQ;EACI,WAAA;ACGZ;ADCI;EACI,WAAA;EACA,WAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;ACCR;ADAQ;EACI,qGAAA;EACA,kBAAA;ACEZ","file":"notificaciones.component.css"}

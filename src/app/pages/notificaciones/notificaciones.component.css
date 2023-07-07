@@ -1,1 +1,24 @@
-/*# sourceMappingURL=notificaciones.component.css.map */
+.notif {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+.notif__content {
+  padding: 12px;
+  width: 12%;
+}
+.notif__content__img {
+  width: 100%;
+}
+.notif__title {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.notif__title__txt {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}/*# sourceMappingURL=notificaciones.component.css.map */

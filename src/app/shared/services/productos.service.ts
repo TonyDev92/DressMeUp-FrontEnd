@@ -20,6 +20,7 @@ export class ProductosService {
 
   getProductos(){
     return this.http.get(this.url).subscribe((res: any ) => {
+      console.log(res)
       this.productSubject.next(res)
     })
   }
