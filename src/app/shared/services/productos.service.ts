@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductosService {
 
-  private url = "Http://localhost:5000/products";
+  private url = "https://dressmeupserver.onrender.com/products";
   
   private productSubject: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
 

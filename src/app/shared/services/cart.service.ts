@@ -11,7 +11,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 })
 export class CartService {
 
-  private url = "Http://localhost:5000/users";
+  private url = "https://dressmeupserver.onrender.com/users";
   cartItemCount: number = 0;
 
   private cartChangedSubject: Subject<void> = new Subject<void>();

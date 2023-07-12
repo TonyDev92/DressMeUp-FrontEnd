@@ -9,7 +9,7 @@ import { Observable, catchError, tap, throwError } from 'rxjs';
 })
 export class AuthService {
 
-  privateUrl = "Http://localhost:5000/users";
+  privateUrl = "https://dressmeupserver.onrender.com/users";
 
   constructor(private http: HttpClient, private router: Router ) { }
 
