@@ -1,25 +1,50 @@
 <div class="formdata">
     <div class="back">
         <a routerLink="">
-            <img class="back__img"  src="./assets/flecha-atras.png" alt="back">
+            <img class="back__img" src="./assets/flecha-atras.png" alt="back">
         </a>
     </div>
     <form class="container" action="" method="post" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <fieldset class="container__fld">
             <legend class="container__fld__title">Tus Datos</legend>
-            <input class="container__fld__inp" type="text" formControlName="name"  placeholder="Nombre y Apellidos">
-            <input class="container__fld__inp" type="text" formControlName="email"  placeholder="Email">
+            <input class="container__fld__inp" type="text" formControlName="name" placeholder="Nombre y Apellidos">
+            <div class="error" *ngIf="errorName == 'Introduce un nombre de Usuario.'">
+                <p class="error__txt">{{errorName}}</p>
+            </div>
+            <input class="container__fld__inp" type="text" formControlName="email" placeholder="Email">
+            <div class="error" *ngIf="errorMessage == 'Email inválido'">
+                <p class="error__txt">{{errorMessage}}</p>
+            </div>
+            <div class="error" *ngIf="errorEmail == 'Este email ya está en uso.'">
+                <p class="error__txt">{{errorEmail}}</p>
+            </div>
             <input class="container__fld__inp" type="password" formControlName="password" placeholder="Contraseña">
+            <div class="error"
+                *ngIf="errorPassword == 'La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial. Debe tener al menos 8 caracteres.'">
+                <p class="error__txt">{{errorPassword}}</p>
+            </div>
         </fieldset>
         <fieldset class="container__fld">
             <legend class="container__dir__title">Dirección</legend>
             <input class="container__fld__inp" type="text" formControlName="street" placeholder="Calle, Número , Piso">
+            <div class="error" *ngIf="errorStreet == 'Dirección no puede ser un campo vacío'">
+                <p class="error__txt">{{errorStreet}}</p>
+            </div>
             <input class="container__fld__inp" type="text" formControlName="postalCode" placeholder="Código Postal">
+            <div class="error" *ngIf="errorPostal == 'Introduce un código postal.'">
+                <p class="error__txt">{{errorPostal}}</p>
+            </div>
             <input class="container__fld__inp" type="text" formControlName="city" placeholder="Ciudad">
+            <div class="error" *ngIf="errorCity == 'Introduce una dirección válida.'">
+                <p class="error__txt">{{errorCity}}</p>
+            </div>
             <input class="container__fld__inp" type="text" formControlName="province" placeholder="Provincia">
+            <div class="error" *ngIf="errorProvince == 'Provincia es un campo requerido.'">
+                <p class="error__txt">{{errorProvince}}</p>
+            </div>
         </fieldset>
         <div class="acept">
-            <input class="check" type="checkbox" value="acepto" name="terms">
+            <input class="check" formControlName="terms" type="checkbox" value="acepto" name="terms">
             <label class="term" for="terms">Acepto los terminos y condiciones de Dress me up.</label>
         </div>
         <button class="btn" type="submit">Continuar</button>

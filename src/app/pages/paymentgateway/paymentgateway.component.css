@@ -1,0 +1,72 @@
+.payment {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.payment__container {
+  width: 100%;
+}
+.payment__container__img {
+  width: 11%;
+  padding: 6px;
+}
+.payment__title {
+  font-family: "nomark";
+  width: 90%;
+  height: 10vh;
+  padding: 20px;
+  text-align: center;
+  margin: 1rem;
+}
+.payment__btn {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.modal__card {
+  width: 20%;
+}
+.modal__card__img {
+  width: 100%;
+}
+.modal__card__txt {
+  font-family: "Nomark";
+}
+.modal__content {
+  background-color: #fff;
+  padding: 20px;
+}
+.modal__content__txt {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+.modal__box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+.modal__box__btn {
+  padding: 8px 16px;
+  background-color: #865dff;
+  color: wheat;
+  border: none;
+  border-radius: 3px;
+}/*# sourceMappingURL=paymentgateway.component.css.map */

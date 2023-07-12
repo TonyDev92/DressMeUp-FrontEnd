@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from 'src/app/shared/services/theme.service';
 
 @Component({
   selector: 'app-notificaciones',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./notificaciones.component.scss']
 })
 export class NotificacionesComponent {
-
+  constructor(public themeService : ThemeService) {}
 }

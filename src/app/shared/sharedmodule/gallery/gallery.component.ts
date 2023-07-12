@@ -1,3 +1,4 @@
+import { ThemeService } from './../../services/theme.service';
 import { FilterProductsService } from './../../services/filter-products.service';
 import { productosInterface } from './../../../models/productos.model';
 import { CartService } from './../../services/cart.service';
@@ -23,6 +24,7 @@ export class GalleryComponent implements OnInit {
     constructor(
       private CartService: CartService , 
       private FilterProductsService: FilterProductsService,
+      public themeService : ThemeService,
       private auth: AuthService) {}
     
     ngOnInit(): void { 
@@ -46,8 +48,6 @@ export class GalleryComponent implements OnInit {
       
       this.CartService.products.subscribe(value => {
         this.inCart = value;
-        
-        
       })
       const cart = {products : this.inCart.map(product => product._id)};
       

@@ -1,1 +1,40 @@
-<p>configuracion works!</p>
+<div [ngClass]="themeService.currentTheme" class="config">
+    <div class="config__container">
+        <a routerLink="/usuario">
+            <img class="config__container__img" src="./assets/flecha-atras.png" alt="back">
+        </a>
+    </div>
+    <h3 class="config__title">Editar Perfil</h3>
+    <form [formGroup]="updateUserForm" (ngSubmit)="onSaveChanges()" class="config__form">
+        <label>Nombre de Usuario : </label>
+        <input class="config__form__inp" placeholder="{{userName}}" formControlName="name" type="text">
+        <label>Email :</label>
+        <input class="config__form__inp" placeholder="{{email}}" formControlName="email" type="text">
+        <label>Dirección :</label>
+        <input class="config__form__inp" placeholder="{{street}}" formControlName="street" type="text">
+        <label>Código Postal :</label>
+        <input class="config__form__inp" placeholder="{{postal}}" formControlName="postalCode" type="text">
+        <label>Ciudad :</label>
+        <input class="config__form__inp" placeholder="{{city}}" formControlName="city" type="text">
+        <label>Provincia :</label>
+        <input class="config__form__inp" placeholder="{{province}}" formControlName="province" type="text">
+        <button class="btn" type="submit">Guardar Cambios</button>
+    </form>
+    <div class="toggle">
+        <span class="toggle__txt"> Tema - {{themeService.currentTheme}}</span>
+        <button class="toggle__btn" (click)="toggleTheme()">
+            <div *ngIf="sunOrMoon === 'sun-icon'" class="toggle__btn--sun">
+                <img class="toggle__btn__img" src="./assets/sol.png" alt="sun">
+            </div>
+            <div *ngIf="sunOrMoon === 'moon-icon'" class="toggle__btn--moon">
+                <img class="toggle__btn__img" src="./assets/media-luna.png" alt="moon">
+            </div>
+        </button>
+    </div>
+    <div class="modal" *ngIf="showModal">
+        <div class="modal__content">
+            <p class="modal__content__txt">{{ modalMessage }}</p>
+            <button class="modal__btn" (click)="showModal = false">Aceptar</button>
+        </div>
+    </div>
+</div>

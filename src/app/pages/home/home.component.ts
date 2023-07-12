@@ -3,6 +3,7 @@ import { FilterProductsService } from './../../shared/services/filter-products.s
 import { Component, OnInit} from '@angular/core';
 import { productosInterface } from 'src/app/models/productos.model';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { ThemeService } from 'src/app/shared/services/theme.service';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ export class HomeComponent implements OnInit{
   productos : productosInterface[] = [];
 
   constructor(private FilterProductsService : FilterProductsService , 
-    private ProductosService : ProductosService , private auth: AuthService) {
+    private ProductosService : ProductosService , private auth: AuthService,
+    public themeService : ThemeService) {
     }
     
   

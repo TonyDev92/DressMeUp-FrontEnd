@@ -3,6 +3,11 @@
     margin: 0px;
     padding: 0px;
     text-decoration: none;
+    //Variables para los temas claro y oscuro : 
+    $primary-color: var(--primary-color);
+    $secondary-color: var(--secondary-color);
+    $text-color: var(--text-color);
+    $background-color: var(--background-color);
 }
 
 @font-face {

@@ -9,7 +9,17 @@
     </div>
     <form class="log__butns" action="" method="post" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <input type="text" formControlName="email" class="log__butns__inp" placeholder="Email" >
+        <div class="error" *ngIf="errorMessage == 'Email inválido'">
+            <p class="error__txt">{{errorMessage}}</p>
+        </div>
         <input class="log__butns__inp" formControlName="password" type="password" placeholder="Password" >
+        <div class="error" *ngIf="errorMessage == 'Contraseña incorrecta'">
+            <p class="error__txt">{{errorMessage}}</p>
+        </div>
         <button class="log__butns__btn" type="submit">Iniciar Sesión</button>
+        <div class="error" *ngIf="errorMessage == 'Error de inicio de sesión'">
+            <p class="error__txt">{{errorMessage}}</p>
+        </div>
     </form>
+    
 </div>

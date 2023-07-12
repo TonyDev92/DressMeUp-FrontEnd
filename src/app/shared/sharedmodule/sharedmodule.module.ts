@@ -8,7 +8,6 @@ import { NavbarComponent } from '../../core/navbar/navbar.component';
 
 
 
-
 @NgModule({
   declarations: [
     GalleryComponent,

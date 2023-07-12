@@ -1,0 +1,24 @@
+<div class="payment">
+    <div class="payment__container">
+        <a routerLink="/carrito">
+            <img class="payment__container__img" src="./assets/flecha-atras.png" alt="back">
+        </a>
+    </div>
+    <h3 class="payment__title">Seleccione el método de pago , Total : {{cartCount}} </h3>
+    <div class="payment__btn">
+        <ngx-paypal [config]="payPalConfig"></ngx-paypal> 
+    </div>
+    <div class="modal" *ngIf="showModal">
+        <div *ngFor="let product of cartItems" class="modal__content">
+                <div class="modal__card">
+                    <img  class="modal__card__img" src="{{product.image}}" alt="{{product.name}}">
+                </div>
+                <p class="modal__card__txt">{{product.price}}</p>
+                <p class="modal__card__txt">{{product.description}}</p>
+            </div>
+            <p class="modal__content__txt">{{ modalMessage }}</p>
+            <div class="modal__box">
+                <button class="modal__box__btn" (click)="showModal = false">Aceptar</button>
+            </div>
+    </div>
+</div>

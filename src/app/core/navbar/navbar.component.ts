@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
 import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 import { productosInterface } from 'src/app/models/productos.model';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { ThemeService } from 'src/app/shared/services/theme.service';
 
 
 @Component({
@@ -22,7 +23,9 @@ export class NavbarComponent implements OnInit {
 
   constructor(private CartService: CartService,
     private FilterProductsService: FilterProductsService,
-    private auth: AuthService) { }
+    private auth: AuthService,
+    public themeService : ThemeService
+    ) { }
 
   setValue() {
     this.isActive = false;

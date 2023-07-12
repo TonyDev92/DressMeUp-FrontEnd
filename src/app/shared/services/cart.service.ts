@@ -5,13 +5,15 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
- 
+
   private url = "Http://localhost:5000/users";
   cartItemCount: number = 0;
+
   private cartChangedSubject: Subject<void> = new Subject<void>();
 
 
@@ -21,10 +23,19 @@ export class CartService {
 
   public products: Observable<productosInterface[]> = this.productsSubject.asObservable();
 
+
   get cartChanged(): Observable<void> {
     return this.cartChangedSubject.asObservable();
   }
 
+
+  getCount(): number {
+    return this.cartItemCount;
+  }
+
+  setCount(value: number) :void {
+    this.cartItemCount = value;
+  }
 
 
 
@@ -50,6 +61,12 @@ export class CartService {
     this.productsSubject.next(updatedProducts);
     this.cartChangedSubject.next();
   }
+
+  clearCart(): void{
+    this.productsSubject.next([]);
+    this.cartItemCount = 0;
+  }
+
   removeProducts(userId: string, productId: String): Observable<any> {
     this.cartChangedSubject.next()
     return this.http.put(`${this.url}/remove/${userId}`, { products: [productId] })
@@ -67,5 +84,9 @@ export class CartService {
     const currentProducts = this.productsSubject.getValue();
     return currentProducts.length;
   
+  }
+  getCartItems(): productosInterface[] {
+    const productsInCart = this.productsSubject.getValue();
+    return productsInCart;
   }
 }

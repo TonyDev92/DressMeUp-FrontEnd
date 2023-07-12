@@ -1,6 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { ThemeService } from 'src/app/shared/services/theme.service';
 
 @Component({
   selector: 'app-miprofile',
@@ -8,8 +9,12 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./miprofile.component.scss']
 })
 export class MiprofileComponent implements OnInit{
+
+
+  constructor(private auth: AuthService , public themeService : ThemeService ) { }
+
+  
   userId: string = "";
-    constructor(private auth: AuthService  ) { }
   userName : string = "";
   email : string = "";
   street: string = "";
@@ -21,7 +26,6 @@ export class MiprofileComponent implements OnInit{
 
     ngOnInit(): void {
         this.auth.checkSession().subscribe((res: any) => {
-          console.log(res);
           
           this.userName = res.name;
           this.email = res.email;

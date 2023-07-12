@@ -6,6 +6,7 @@ import { CartComponent } from './cart.component';
 import { SharedmoduleModule } from 'src/app/shared/sharedmodule/sharedmodule.module';
 
 
+import { NgxPayPalModule } from 'ngx-paypal';
 
 @NgModule({
   declarations: [

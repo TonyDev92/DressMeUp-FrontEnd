@@ -1,4 +1,4 @@
-<div class="routes">
+<div [ngClass]="themeService.currentTheme" class="routes">
     <div class="routes__content" *ngFor="let path of routesPath">
         <a class="routes__content__name" routerLink={{path.path}}>
             <div class="config" *ngIf="path.name === 'Configuración'">
@@ -31,9 +31,16 @@
         <div class="delete__content">
             <img class="delete__content__img" src="./assets/dejar-de-seguir.png" alt="x">
         </div>
-        <button class="delete__btn">Eliminar mi cuenta</button>
+        <button class="delete__btn" (click)="showModal = true">Eliminar mi cuenta</button>
         <div class="go">
             <img class="go__img" src="./assets/flecha-correcta.png" alt="go">
+        </div>
+    </div>
+    <div class="modal" *ngIf="showModal">
+        <div class="modal__content">
+            <p class="modal__content__txt">Atención esta acción no es reversible, <br>¿Quiere eliminar su cuenta?</p>
+            <button class="modal__btn" (click)="deleteAcount()">Aceptar</button>
+            <button class="modal__btn__cancel" (click)="showModal = false">Cancelar</button>
         </div>
     </div>
 </div>

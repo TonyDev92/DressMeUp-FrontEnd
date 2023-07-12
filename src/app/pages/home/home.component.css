@@ -1,3 +1,17 @@
+.light {
+  --primary-color: rgba(230, 230, 148, 0.977);
+  --secundary-color: rgba(192, 192, 192, 0.925);
+  --text-color: black;
+  --background-color: white;
+}
+
+.dark {
+  --primary-color: black;
+  --secundary-color: white;
+  --text-color: #ffff;
+  --background-color: #545B77;
+}
+
 .home {
   display: flex;
   flex-direction: row;
@@ -7,6 +21,7 @@
   padding-top: 90px;
   justify-content: center;
   align-items: center;
+  background-color: var(--background-color);
 }
 .home__container {
   margin: 1rem;
@@ -17,4 +32,8 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.home__txt {
+  font-family: "Nomark";
+  color: var(--text-color);
 }/*# sourceMappingURL=home.component.css.map */

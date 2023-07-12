@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { catchError, tap, throwError } from 'rxjs';
+import { Observable, catchError, tap, throwError } from 'rxjs';
 
 
 @Injectable({
@@ -19,6 +19,13 @@ export class AuthService {
 
   login(user: any) {
     return this.http.post(`${this.privateUrl}/login`, user)
+  }
+
+  userUpdate(user : any , id: string) : Observable<any>{
+    console.log(user);
+    console.log(id);
+    
+    return this.http.put(`${this.privateUrl}/updateuser/${id}`, user)
   }
 
   getToken() {
@@ -73,5 +80,9 @@ export class AuthService {
       }
     }
     return null;
+  }
+
+  userDelete(id: string){
+      return this.http.delete(`${this.privateUrl}/delete/${id}`)
   }
 }

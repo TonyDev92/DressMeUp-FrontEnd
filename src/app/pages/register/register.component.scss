@@ -70,3 +70,16 @@
     }
 }
 
+.error{
+    width: 100%;
+    height: auto;
+    margin: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__txt{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: red;
+    }
+}

@@ -1,3 +1,4 @@
+import { ThemeService } from '../../services/theme.service';
 import { FilterProductsService } from './../../services/filter-products.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,9 @@ export class HeaderComponent implements OnInit{
     search: boolean = false;
     filteredProducts='';
 
-    constructor(private FilterProductsService : FilterProductsService) { }
+    constructor(private FilterProductsService : FilterProductsService,
+      public themeService : ThemeService
+      ) { }
 
     setSearch(){
       !this.search ? this.search = true : this.search = false;

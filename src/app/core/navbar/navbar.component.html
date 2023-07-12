@@ -1,4 +1,4 @@
-<nav class="menu">
+<nav [ngClass]="themeService.currentTheme" class="menu">
     <a class="menu__in" (click)="setValue()" routerLink="inicio">
         <div class="menu__home">
             <img class="menu__home__hm" src="./assets/hogar.png" alt="home">

@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 })
 export class LoginComponent implements OnInit{
   loginForm!: FormGroup;
-
+  errorMessage: string = '';
   constructor(private form: FormBuilder,  private auth : AuthService, private router: Router){}
   ngOnInit(): void {
       this.loginForm = this.form.group({
@@ -27,6 +27,17 @@ export class LoginComponent implements OnInit{
       document.cookie = `token=${data.token}`;
       
       this.router.navigate(['/inicio']);
-    })
+    } ,(error: any) => {
+      if (error.status === 404) {
+        const { message } = error.error;
+        if (message === 'invalid email address') {
+          this.errorMessage = 'Email inválido';
+        } else if (message === 'invalid password') {
+          this.errorMessage = 'Contraseña incorrecta';
+        } else {
+          this.errorMessage = 'Error de inicio de sesión';
+        }
+      }
+    } ) 
   }
 }

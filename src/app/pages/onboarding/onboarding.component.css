@@ -20,9 +20,9 @@
   justify-content: center;
 }
 .log__container__img {
-  width: 60%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 80%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .log__butns {
   width: 100%;

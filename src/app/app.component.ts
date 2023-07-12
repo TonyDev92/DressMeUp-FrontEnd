@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
   
   }
   showcontent() {
-    this.show = this.currentUrl !== '/' && !this.currentUrl.includes('/login') && !this.currentUrl.includes('/register');
+    this.show = this.currentUrl !== '/' && !this.currentUrl.includes('/login') && !this.currentUrl.includes('/register') && !this.currentUrl.includes('/carrito/pagos');
   }
   
 }
