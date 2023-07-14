@@ -44,7 +44,7 @@ export class CartService {
     return this.http.get(`${this.url}/${userId}`)
   }
 
-  addToCart(product: productosInterface) { //Servicio para añadir elementos al carrito 
+  addToCart(product: productosInterface) { 
 
       const currentProducts = this.productsSubject.getValue();
       const updatedProducts = [...currentProducts, product];

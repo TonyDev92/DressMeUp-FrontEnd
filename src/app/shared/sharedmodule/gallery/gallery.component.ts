@@ -43,7 +43,7 @@ export class GalleryComponent implements OnInit {
     }
 
     add(product: productosInterface){
-      // this.inCart = this.CartService.products;
+      
       this.CartService.addToCart(product); 
       
       this.CartService.products.subscribe(value => {

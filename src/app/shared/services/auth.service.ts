@@ -22,13 +22,12 @@ export class AuthService {
   }
 
   userUpdate(user : any , id: string) : Observable<any>{
-    console.log(user);
-    console.log(id);
     
     return this.http.put(`${this.privateUrl}/updateuser/${id}`, user)
   }
 
   getToken() {
+    
     const cookies = document.cookie.split(';');
     for (let i = 0; i < cookies.length; i++) {
       const cookie = cookies[i].trim();
@@ -57,6 +56,7 @@ export class AuthService {
   }
 
   logOut() {
+    // Remove token and user from cookie
     document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     document.cookie = 'user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
   }
@@ -71,7 +71,7 @@ export class AuthService {
         
         try {
           const validJson = userCookie.substring(0, userCookie.indexOf('}') + 1);
-          //validación del Json
+          //JSON Validation
           const user = JSON.parse(decodeURIComponent(validJson));
           return user._id
         } catch (error) {
